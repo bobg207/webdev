@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="../css/rps.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <a href="#" target="_blank"><i class="logo fa-solid fa-infinity"></i></a>
+            <p class="company">Mojo</p>
+        </div>
+        
+        <ul class="nav">
+            <li class="item">
+                <a class="link" href="../index.html">Home</a>
+            </li>
+            <li class="item">
+                <a class="link" href="/html/strawberry.html">Strawberry Page</a>
+            </li>
+            <li class="item">
+                <a class="link" href="/html/monogram.html">Monogram Site</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+        <h1 class="header">Rock, Paper, Scissors</h1>
+        <div class="choice-container">
+            <div class="user-frame">
+                <h2>User Choice</h2>
+                <img src="../images/rps_imgs/rps4.png" class='user-img' alt="rps">
+            </div>
+            <div class="computer-frame">
+                <h2>Computer Choice</h2>
+                <img src="../images/rps_imgs/rps4.png" class='comp-img' alt="rps">
+            </div>
+        </div>
+        <div class="score-container">
+            <p>User Score: <span class="user-score">0</span></p>
+            <p>Computer Score: <span class="comp-score">0</span></p>
+        </div>
+        
+        <h2>Result: <span class="result">Start Game</span></h2>
+
+        <div class="user-choices">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+        <button id="reset">New Game</button>
+    </main>
+    
+    <script src="../js/rps.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero-section {
+    padding-top: 1em;
+    padding-bottom: 15em;
+    background-image: url(../images/monog_imgs/console.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+
+header {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+    margin-bottom: 10em;
+    padding: 1em .5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1a2456;
+    color: #ff8b68;
+}
+
+.header-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-left p {
+    margin-left: .25em;
+    /* clamp(min, grow, max) */
+    font-size: clamp(.75rem, 1.25vw, 4rem);
+    text-transform: uppercase;
+}
+
+.header-left i {
+    /* clamp(min, grow, max) */
+    font-size: clamp(.75rem, 1.25vw, 4rem);
+}
+
+nav a {
+    font-size: clamp(.5rem, 1vw, 3rem);
+    margin-left: .5em;
+    color: #f5c2b2;
+    text-transform: uppercase;
+}
+
+.hero {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.hero h1{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    color: #f5c2b2;
+}
+
+.hero p {
+    width: 70%;
+    margin: 1rem auto;
+    text-align: center;
+    color: #f5c2b2;
+    font-size: clamp(1.15rem, 1vw, 3rem);
+}
+
+.products {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-color:rgb(255, 248, 248);
+}
+
+.product {
+    width: clamp(25em, 48%, 60em);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: space-between;
+}
+
+.product img {
+    /* display: inline-block; */
+    aspect-ratio: 1/1;
+}
+
+.item {
+    margin: .25em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-name {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.item-description {
+    margin: .25em 0;
+}
+
+footer {
+    background-color: purple;
+}
+
+.col-container {
+    width: 90%;
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    border: 2px solid white;
+}
+
+.footer-col {
+    width: 50%;
+    margin: .5em 0;
+}
+
+@media (max-width: 700px) {
+    .col-container {
+        flex-direction: column-reverse;
+    }
+}
