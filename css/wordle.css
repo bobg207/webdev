@@ -1,39 +1,89 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-    background-color: rgb(245, 242, 242);
+  background-color: rgb(245, 242, 242);
 }
 
 h1 {
-    margin: .5em 0;
-    text-align: center;
-    font-size: clamp(1.5rem, 5vw, 4rem);
+  margin: 0.5em 0;
+  padding: 0;
+  text-align: center;
+  font-size: clamp(1.5rem, 2vw, 4rem);
 }
 
 .board-container {
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  margin-bottom: 0.25em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .row {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .cell {
-    width: 10vw;
-    height: 10vw;
-    margin: .25em;
-    background-color: rgb(238, 232, 232);
-    border: 2px solid rgba(0, 0, 0, 0.473);
-    border-radius: 5px;
+  width: clamp(36px, 6vw, 64px);
+  height: clamp(36px, 6vw, 64px);
+  margin: 0.25em;
+  background-color: rgb(238, 232, 232);
+  border: 2px solid rgba(0, 0, 0, 0.473);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.keyboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.key-row {
+  margin: 0.25em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.key-row div {
+  margin: 0 0.25em;
+  width: clamp(28px, 6vw, 48px);
+  height: clamp(28px, 6vw, 48px);
+  font-size: clamp(0.75rem, 1vw, 2rem);
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.key-row div:hover {
+  cursor: pointer;
+}
+
+#del,
+#enter {
+  width: clamp(48px, 6vw, 75px);
+}
+
+#del i {
+  padding: 0.25em, 0.5rem;
+  color: black;
+  font-size: clamp(1rem, 1vw, 3rem);
+}
+
+#enter span {
+  font-size: clamp(0.75rem, 1vw, 1.2rem);
+}
