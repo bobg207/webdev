@@ -14,6 +14,7 @@ footer {
   align-items: center;
 }
 
+
 .header-left {
   display: flex;
   justify-content: space-between;
@@ -55,6 +56,123 @@ footer {
   border: 1px solid black;
   border-radius: 5px;
 }
+
+/* main {
+  position: relative;
+} */
+
+/* CARD CHALLENGE */
+.card-challenge {
+  margin-bottom: 2em;
+  position: relative;
+}
+
+.card-top {
+  height: 30vh;
+  background-color: black;
+  background-image: url("/images/swirl-mobile.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-bottom {
+  height: 70vh;
+  background-color: rgb(247, 218, 235);
+}
+
+.card {
+  padding: 1.5em 0;
+  position: absolute;
+  left: 5vw;
+  top: 20%;
+  width: 90%;
+  max-width: 1000px;
+  background-color: rgb(255, 245, 245);
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px rgb(0, 0, 0, 0.3);
+}
+
+.inner-top {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.inner-top img {
+  margin-right: .75em;
+  width: 5vw;
+}
+
+.faq-container {
+  width: 85%;
+  margin: 0 auto;
+  margin-top: .5em;
+}
+
+.faq {
+  padding: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle {
+  width: 8vw;
+}
+
+.minus {
+  display: none;
+}
+
+.faq-question {
+  width: 75%;
+  font-size: clamp(1.05rem, 2vw, 2rem);
+  font-weight: bold;
+}
+
+.faq-answer {
+  display: none;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.15rem;
+  color: rgb(157, 155, 155);
+}
+
+/* FORM BEGIN */
+form {
+  width: 90%;
+  margin: 2em auto;
+  border: 2px solid black;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid black;
+}
+
+label {
+  display: block;
+  font-size: clamp(0.75rem, 1vw, 2rem);
+}
+
+#submit {
+  padding: 0.5em 0.75em;
+  width: clamp(6rem, 5vw, 10rem);
+  height: clamp(2rem, 2vw, 4rem);
+}
+/* FORM END */
 
 footer {
   font-size: 1.15rem;
