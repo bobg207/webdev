@@ -20,7 +20,9 @@
 
 header,
 footer {
-  padding: 10px 30px;
+  width: 100%;
+  height: 80px;
+  padding: 4rem 2rem;
   background-color: rgb(168, 168, 252);
   color: whitesmoke;
   display: flex;
@@ -34,6 +36,13 @@ footer {
   align-items: center;
 }
 
+#menu-open,
+#menu-close {
+  display: none;
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
 .logo {
   margin-right: 10px;
   font-size: 30px;
@@ -45,6 +54,7 @@ footer {
 }
 
 .nav {
+  position: static;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,22 +62,28 @@ footer {
 
 .item {
   list-style: none;
-  padding: 0.25rem 0.5rem;
+  margin-left: 2rem;
 }
 
-.nav a {
+.link {
   width: 50%;
-  font-size: 1.25rem;
+  padding: .25rem .5rem;
+  font-size: 1.5rem;
   text-decoration: none;
   color: inherit;
-  border: 1px solid transparent;
-  box-shadow: 5px 5px 2px 1px rgba(0, 0, 255, 0.2);
+  border-radius: 5px;
+  transition: 500ms color, 
+              500ms background-color;
 }
 
-.nav a:hover {
+.link:hover {
   color: black;
-  border: 1px solid black;
-  border-radius: 5px;
+  background-color: white;
+}
+
+.footer-center p {
+  font-size: clamp(1rem, 1.5vw, 1.75rem);
+  
 }
 
 /* ########################### */
@@ -75,12 +91,13 @@ footer {
 /* ########################### */
 .four-card-challenge {
   font-family: "Poppins", sans-serif;
-  height: 1000px;
+  width: clamp(430px, 95%, 1700px);
+  margin: 0 auto;
+  padding-bottom: 5em;
   background-color: var(--color-light-gray);
 }
 
 .top-container {
-  width: 95%;
   margin: 0 auto;
   padding: 5em 0;
   text-align: center;
@@ -98,28 +115,60 @@ h1 span {
 }
 
 .top-container > p {
+  width: clamp(350px, 50%, 760px);
+  margin: 0 auto;
   font-size: 1.25rem;
   color: var(--text-color);
+  text-align: center;
 }
 
 .options-container {
-  width: 95%;
+  width: clamp(350px, 80%, 1200px);
   margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   align-items: center;
+  gap: 1;
+}
+
+.options {
+  width: clamp(300px, 30vw, 375px);
 }
 
 .option {
+  margin-bottom: 2rem;
+  padding: 1rem;
   box-shadow: 5px 5px 8px var(--text-color);
+  border-radius: 10px;
+}
+
+.left {
+  border-top: 5px solid var(--color-cyan);
+}
+
+.center:nth-child(1) {
+  border-top: 5px solid var(--color-red);
+}
+
+.center:nth-child(2) {
+  border-top: 5px solid var(--color-orange);
+}
+
+.right {
+  border-top: 5px solid var(--color-blue);
+}
+
+.option img {
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 /* ########################### */
 /*        FAQ ACCORDION        */
 /* ########################### */
 .card-challenge {
-  margin-bottom: 2em;
+  margin: 4em 0;
   position: relative;
 }
 
@@ -140,10 +189,12 @@ h1 span {
 .card {
   padding: 1.5em 0;
   position: absolute;
-  left: 5%;
+  left: 0;
+  right: 0;
   top: 100px;
   width: 90%;
   max-width: 600px;
+  margin: 0 auto;
   background-color: rgb(255, 245, 245);
   border-radius: 10px;
   box-shadow: 3px 3px 15px rgb(0, 0, 0, 0.3);
@@ -251,8 +302,60 @@ footer a i {
 /* ########################### */
 /*        MEDIA QUERIES        */
 /* ########################### */
-@media (min-width: 450px) {
-  .card {
-    left: 25vw;
+@media (max-width: 1400px) {
+  .options-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
+}
+
+
+@media (max-width: 1020px) {
+  header {
+    position: relative;
+  }
+
+  #menu-open {
+    display: inline-block;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4rem;
+    font-size: 1.5rem;
+    background-color: rgba(256, 256, 256, 1);
+    border-radius: 0 0 5px 5px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+    /* transform: translateX(-100%);
+    transition: transform 500ms; */
+  }
+
+  .item {
+    width: 100%;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .link {
+    display: inline-block;
+    border-radius: 0;
+    width: 50%;
+    padding: 1rem 0;
+    color: black;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+  }
+
+  .link:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, .6);
+  }
+
 }
