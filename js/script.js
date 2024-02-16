@@ -39,14 +39,25 @@ minusBtns.forEach((btn) => {
 // ###############################
 // #########  Hamb Menu  #########
 // ###############################
-menuOpen.addEventListener('click', () => {
-    linksMenu.style.display = 'block'
-    menuClose.style.display = 'inline-block'
-    menuOpen.style.display = 'none'
-})
+// menuOpen.addEventListener('click', () => {
+//     linksMenu.style.display = 'block'
+//     menuClose.style.display = 'inline-block'
+//     menuOpen.style.display = 'none'
+// })
 
+// menuClose.addEventListener('click', () => {
+//     linksMenu.style.display = 'none'
+//     menuClose.style.display = 'none'
+//     menuOpen.style.display = 'inline-block'
+// })
+
+menuOpen.addEventListener('click', () => {
+    linksMenu.classList.toggle('.active')
+    menuClose.classList.toggle('.active')
+    menuOpen.classList.toggle('.active')
+})
 menuClose.addEventListener('click', () => {
-    linksMenu.style.display = 'none'
-    menuClose.style.display = 'none'
-    menuOpen.style.display = 'inline-block'
+    linksMenu.classList.toggle('.active')
+    menuClose.classList.toggle('.active')
+    menuOpen.classList.toggle('.active')
 })

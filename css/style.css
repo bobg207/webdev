@@ -75,15 +75,13 @@ footer {
   transition: all 500ms ease-in-out;
 }
 
-.link:hover
-.link:focus {
+.link1:hover {
   color: black;
   background-color: white;
 }
 
 .footer-center p {
   font-size: clamp(1rem, 1.5vw, 1.75rem);
-  
 }
 
 /* ########################### */
@@ -310,7 +308,6 @@ footer a i {
   }
 }
 
-
 @media (max-width: 1020px) {
   header {
     position: relative;
@@ -338,6 +335,10 @@ footer a i {
     transition: transform 500ms; */
   }
 
+  .active {
+    display: none;
+  }
+  
   .item {
     width: 100%;
     margin-top: 4rem;
