@@ -48,52 +48,25 @@ minusBtns.forEach((btn) => {
 // ###############################
 // #########  Hamb Menu  #########
 // ###############################
-menuOpen.addEventListener('click', () => {
-    linksMenu.style.display = 'block'
-    menuClose.style.display = 'inline-block'
-    menuOpen.style.display = 'none'
-})
-
-menuClose.addEventListener('click', () => {
-    linksMenu.style.display = 'none'
-    menuClose.style.display = 'none'
-    menuOpen.style.display = 'inline-block'
-})
-
-// ###############################
-// #########  Dad Jokes  #########
-// ###############################
-const djUrl = 'https://dad-jokes-by-api-ninjas.p.rapidapi.com/v1/dadjokes';
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '38da3868b8mshe31b334e91ea62cp16cbaejsn18ddea5caf90',
-		'X-RapidAPI-Host': 'dad-jokes-by-api-ninjas.p.rapidapi.com'
-	}
-};
-
-async function getJoke() {
-    try {
-        const response = await fetch(djUrl, options);
-        const result = await response.json();
-        const joke = result[0].joke;
-        theJoke.textContent = joke
-    } catch (error) {
-        theJoke.textContent = "something went awry...";
-    }
-}
-
-// jokeBtn.addEventListener('click', () => {
-//     getJoke()
+// menuOpen.addEventListener('click', () => {
+//     linksMenu.style.display = 'block'
+//     menuClose.style.display = 'inline-block'
+//     menuOpen.style.display = 'none'
 // })
 
-// ###############################
-// #########  weather    #########
-// ###############################
+// menuClose.addEventListener('click', () => {
+//     linksMenu.style.display = 'none'
+//     menuClose.style.display = 'none'
+//     menuOpen.style.display = 'inline-block'
+// })
 
-// coordinates for Portland, ME
-let latitude = 43.65737
-let longitude = -70.2589
-
-
-
+menuOpen.addEventListener('click', () => {
+    linksMenu.classList.toggle('.active')
+    menuClose.classList.toggle('.active')
+    menuOpen.classList.toggle('.active')
+})
+menuClose.addEventListener('click', () => {
+    linksMenu.classList.toggle('.active')
+    menuClose.classList.toggle('.active')
+    menuOpen.classList.toggle('.active')
+})
