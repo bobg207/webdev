@@ -4,161 +4,117 @@
   padding: 0;
 }
 
-a {
-  text-decoration: none;
+body {
+  position: relative;
 }
 
-.hero-section {
-  padding-top: 1em;
-  padding-bottom: 15em;
-  background-image: url(../images/monog_imgs/console.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-header {
-  position: fixed;
-  top: 20px;
-  right: 0;
-  left: 0;
-  z-index: 100;
-  width: 90%;
-  max-width: 1800px;
-  margin: 0 auto;
-  /* margin-bottom: 10em; */
-  padding: 1em 0.5em;
+main {
+  height: 500px;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1a2456;
-  color: #ff8b68;
-}
-
-.header-left {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-left p {
-  margin-left: 0.25em;
-  /* clamp(min, grow, max) */
-  font-size: clamp(0.75rem, 1.25vw, 4rem);
-  text-transform: uppercase;
-}
-
-.header-left i {
-  /* clamp(min, grow, max) */
-  font-size: clamp(0.75rem, 1.25vw, 4rem);
-}
-
-nav a {
-  font-size: clamp(0.5rem, 1vw, 3rem);
-  margin-left: 0.5em;
-  color: #f5c2b2;
-  text-transform: uppercase;
-}
-
-.hero {
-  width: 90%;
-  max-width: 1800px;
-  margin: 0 auto;
-  padding-top: 20em;
-}
-
-.hero h1 {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-  text-transform: uppercase;
-  color: #f5c2b2;
-}
-
-.hero p {
-  width: 70%;
-  margin: 1rem auto;
-  text-align: center;
-  color: #f5c2b2;
-  font-size: clamp(1.15rem, 1vw, 3rem);
-}
-
-.products {
-  width: 90%;
-  max-width: 1800px;
-  margin: 0 auto;
-  padding: 2em;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 1em;
-  background-color: rgb(255, 248, 248);
 }
 
-.product {
+.section {
+  width: 200px;
+  height: 200px;
   position: relative;
-  width: clamp(25em, 48%, 60em);
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  /* border: 2px solid; */
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: space-between;
-}
-
-.product img {
-  /* display: inline-block; */
-  aspect-ratio: 1/1;
-}
-
-.pre-order-btn {
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
   position: absolute;
-  top: 20px;
-  right: 0;
-  padding: 0.6rem 1.15rem;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: bold;
-  background-color: orange;
-  cursor: pointer;
+  transition: transform 0.5s ease-in;
 }
 
-.item {
-  margin: 0.25em 0;
+.section p {
+  position: absolute;
+  top: 85px;
+  left: 85px;
+}
+
+.box1 {
+  transform-origin: top left;
+  background-color: red;
+  top: 0px;
+  left: 0px;
+}
+
+.section:hover .box1 {
+  transform: rotateZ(90deg);
+}
+
+.box2 {
+  transform-origin: top right;
+  background-color: green;
+  top: 0px;
+  left: 100px;
+}
+
+.section:hover .box2 {
+  transform: rotateZ(-90deg);
+}
+
+.box3 {
+  transform-origin: bottom left;
+  background-color: yellow;
+  top: 100px;
+  left: 0px;
+}
+
+.section:hover .box3 {
+  transform: rotateZ(-90deg);
+}
+
+.box4 {
+  transform-origin: bottom right;
+  background-color: blue;
+  top: 100px;
+  left: 100px;
+}
+
+.section:hover .box4 {
+  transform: rotateZ(90deg);
+}
+
+/* The element to apply the animation to */
+.ani {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  background-color: red;
+  animation: example 2s linear alternate infinite;
 }
 
-.item-name {
-  text-transform: uppercase;
-  font-weight: bold;
+.spoke {
+  width: 100px;
+  height: 2px;
+  border: 2px solid;
 }
 
-.item-description {
-  margin: 0.25em 0;
+.spoke2 {
+  transform: rotateZ(45deg);
 }
 
-footer {
-  background-color: purple;
-}
-
-.col-container {
-  width: 90%;
-  max-width: 1800px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 2px solid white;
-}
-
-.footer-col {
-  width: 50%;
-  margin: 0.5em 0;
-}
-
-@media (max-width: 700px) {
-  .col-container {
-    flex-direction: column-reverse;
+@keyframes example {
+  0% {
+    transform: scale(1);
+    left: 0px;
+  }
+  50% {
+    transform: scale(0.5);
+    left: 200px;
+  }
+  100% {
+    transform: scale(1);
+    left: 0px;
   }
 }
